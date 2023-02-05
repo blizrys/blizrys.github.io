@@ -1,7 +1,7 @@
 {
   "name": "create-react-app",
-  "homepage": "https://blizrys.github.io/react-gh-pages",
   "version": "5.0.0",
+  "homepage": "https://blizrys.github.io",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
