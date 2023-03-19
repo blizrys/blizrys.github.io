@@ -6,24 +6,9 @@ import Link from '@mui/material/Link';
 import ProTip from './ProTip';
 import Portfolio from './portfolio/Portfolio';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 export default function App() {
   return (
-    <Portfolio>
-      
-    </Portfolio>
+    <Portfolio></Portfolio>
     // <Container maxWidth="sm">
     //   <Box sx={{ my: 4 }}>
     //     <Typography variant="h4" component="h1" gutterBottom>
