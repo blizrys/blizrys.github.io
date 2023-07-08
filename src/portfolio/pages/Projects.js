@@ -13,12 +13,18 @@ import Stack from '@mui/material/Stack';
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const projectList = [
-  {
-    title: 'Hello',
-    description:
-      'This is a media card. You can use this section to describe the content.',
-    tags: ['html', 'reactjs', 'angular', 'angular', 'angular', 'angular'],
-  },
+    {
+      title: 'MelParking',
+      description:
+        'Our goal is to find an insight that could be potentially given to VICRoad’s Executives an idea for a city development plan could pursue towards. The insight will point out the current situations. Then we will disclose what could be missing. Lastly, we will suggest a potential next step to handle better parking spaces in The City of Melbourne.',
+      tags: ['data-visualization', 'firebase-hosting', 'open-data', 'html','d3.js'],
+    },
+  // {
+  //   title: 'Hello',
+  //   description:
+  //     'This is a media card. You can use this section to describe the content.',
+  //   tags: ['html', 'reactjs', 'angular', 'angular', 'angular', 'angular'],
+  // },
 ];
 
 export default function Projects() {
@@ -45,7 +51,7 @@ export default function Projects() {
         <Grid container spacing={4}>
           {typeof projectList !== 'undefined' && projectList.length > 0
             ? projectList.map((project) => (
-                <Grid item key={project} xs={12} sm={6} md={4}>
+                <Grid item key={project} xs={12} sm={6} md={6}>
                   <Card
                     sx={{
                       height: '100%',
@@ -55,10 +61,10 @@ export default function Projects() {
                   >
                     <CardMedia
                       component="img"
-                      // sx={{
-                      //   // 16:9
-                      //   pt: '56.25%',
-                      // }}
+                      sx={{
+                        // 16:9
+                        height: '200px',
+                      }}
                       image="https://source.unsplash.com/random"
                       alt="random"
                     />
