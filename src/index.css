@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #07111f;
+  }
+
+  body {
+    @apply bg-ocean-abyss text-ocean-text font-sans antialiased overflow-x-hidden;
+  }
+
+  ::selection {
+    background: #0ea5e930;
+    color: #38bdf8;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #07111f; }
+  ::-webkit-scrollbar-thumb {
+    background: #1e3a5f;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: #0ea5e9; }
+}
+
+@layer components {
+
+  /* ── Color utilities ─────────────────────── */
+  .text-surface  { color: #0ea5e9; }
+  .text-foam     { color: #38bdf8; }
+  .text-coral    { color: #f97316; }
+  .text-muted    { color: #94a3b8; }
+
+  /* ── Section label (numbered prefix) ────── */
+  .section-num {
+    @apply font-mono text-xs tracking-widest;
+    color: #0ea5e9;
+  }
+
+  /* ── Section heading ─────────────────────── */
+  .section-title {
+    @apply font-sans font-bold text-white tracking-tight;
+  }
+
+  /* ── Divider line ────────────────────────── */
+  .section-line {
+    @apply flex-1 h-px;
+    background: linear-gradient(90deg, #1e3a5f, transparent);
+  }
+
+  /* ── Card ────────────────────────────────── */
+  .ocean-card {
+    @apply rounded-xl border transition-all duration-300;
+    background: #0b1929;
+    border-color: #1e3a5f;
+  }
+  .ocean-card:hover {
+    border-color: #0ea5e950;
+    box-shadow: 0 8px 32px rgba(14, 165, 233, 0.08);
+    transform: translateY(-2px);
+  }
+
+  /* ── Tag pill ────────────────────────────── */
+  .ocean-tag {
+    @apply text-xs font-sans font-medium px-3 py-1 rounded-full border;
+    color: #7dd3fc;
+    border-color: #1e3a5f;
+    background: #0ea5e908;
+  }
+
+  /* ── Primary button ──────────────────────── */
+  .btn-primary {
+    @apply relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm
+           transition-all duration-300 overflow-hidden;
+    background: #0ea5e9;
+    color: #07111f;
+  }
+  .btn-primary:hover {
+    background: #38bdf8;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(14, 165, 233, 0.4);
+  }
+
+  /* ── Outline button ──────────────────────── */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm
+           border transition-all duration-300;
+    color: #e2e8f0;
+    border-color: #1e3a5f;
+    background: transparent;
+  }
+  .btn-outline:hover {
+    border-color: #0ea5e9;
+    color: #38bdf8;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.2);
+  }
+
+  /* ── Coral/accent button ─────────────────── */
+  .btn-coral {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm
+           transition-all duration-300;
+    background: #f97316;
+    color: #fff;
+  }
+  .btn-coral:hover {
+    background: #fb923c;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(249, 115, 22, 0.35);
+  }
+
+  /* ── Gradient text ───────────────────────── */
+  .gradient-text {
+    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 50%, #f97316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Shimmer name effect ─────────────────── */
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      #e2e8f0 0%,
+      #38bdf8 30%,
+      #ffffff 50%,
+      #38bdf8 70%,
+      #e2e8f0 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  /* ── Hero ocean gradient bg ──────────────── */
+  .ocean-hero-bg {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, #0f2a4a 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 60%, #0c1f35 0%, transparent 60%),
+      #07111f;
+  }
+
+  /* ── Skill bar (optional) ────────────────── */
+  .skill-bar {
+    @apply h-1 rounded-full;
+    background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  }
+}
