@@ -166,3 +166,11 @@ export const LANGUAGES = [
   { lang: 'Chinese', level: 'Elementary' },
   { lang: 'Russian', level: 'Elementary' },
 ]
+
+// Duolingo streak (Chinese). The count grows by one each day automatically,
+// anchored to a known value on a known date — no API needed.
+// If you ever break the streak, reset both fields to the current real count + today's date.
+export const DUOLINGO_STREAK = {
+  anchorDays: 1400,
+  anchorDate: '2026-06-22',
+}

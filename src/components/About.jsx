@@ -1,6 +1,14 @@
-import { SKILLS, AWARDS, LANGUAGES, STATS } from '../data/portfolio'
+import { SKILLS, AWARDS, LANGUAGES, STATS, DUOLINGO_STREAK } from '../data/portfolio'
+
+function getStreak() {
+  const anchor = new Date(DUOLINGO_STREAK.anchorDate + 'T00:00:00')
+  const today = new Date()
+  const elapsed = Math.floor((today - anchor) / 86400000)
+  return DUOLINGO_STREAK.anchorDays + Math.max(0, elapsed)
+}
 
 export default function About() {
+  const streak = getStreak()
   return (
     <section id="about" className="py-28 px-6 bg-ocean-deep">
       <div className="max-w-5xl mx-auto">
@@ -69,13 +77,25 @@ export default function About() {
             {/* Languages */}
             <div className="pt-2">
               <p className="text-ocean-muted text-xs font-semibold uppercase tracking-widest mb-3">Languages</p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 mb-4">
                 {LANGUAGES.map(({ lang, level }) => (
                   <div key={lang} className="text-sm">
                     <span className="text-white font-medium">{lang}</span>
                     <span className="text-ocean-muted text-xs ml-1.5">({level})</span>
                   </div>
                 ))}
+              </div>
+
+              {/* Duolingo streak */}
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-ocean-border bg-ocean-abyss">
+                <span className="text-lg">🔥</span>
+                <span className="text-sm">
+                  <span className="text-white font-bold">{streak.toLocaleString()}</span>
+                  <span className="text-ocean-muted"> day </span>
+                  <span className="font-semibold" style={{ color: '#58cc02' }}>Duolingo</span>
+                  <span className="text-ocean-muted"> streak — learning Chinese</span>
+                </span>
+                <span className="text-ocean-coral text-xs font-medium">&amp; counting</span>
               </div>
             </div>
           </div>
