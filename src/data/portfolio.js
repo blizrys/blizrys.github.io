@@ -98,6 +98,22 @@ export const EXPERIENCE = [
       'Involved in multiple Thai government initiative applications.',
     ],
   },
+  {
+    company: 'Dimension Data',
+    role: 'Network Infrastructure Engineer (Internship)',
+    period: 'Apr 2012 – Jun 2012',
+    location: 'Bangkok, Thailand',
+    bullets: [
+      'Assisted network engineers across multiple customer sites with installation, configuration and maintenance.',
+    ],
+  },
+]
+
+export const STATS = [
+  { value: '10+', label: 'Years in tech' },
+  { value: '2',   label: 'Countries' },
+  { value: '4',   label: 'Languages' },
+  { value: '2×',  label: 'RoboCup Worlds, 2013' },
 ]
 
 export const EDUCATION = [

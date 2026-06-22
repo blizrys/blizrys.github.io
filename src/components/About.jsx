@@ -1,13 +1,23 @@
-import { SKILLS, AWARDS, LANGUAGES } from '../data/portfolio'
+import { SKILLS, AWARDS, LANGUAGES, STATS } from '../data/portfolio'
 
 export default function About() {
   return (
     <section id="about" className="py-28 px-6 bg-ocean-deep">
       <div className="max-w-5xl mx-auto">
 
-        <div className="flex items-center gap-4 mb-16">
+        <div className="flex items-center gap-4 mb-14">
           <h2 className="text-white font-bold text-3xl sm:text-4xl">About Me</h2>
           <div className="section-line" />
+        </div>
+
+        {/* At a glance */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-ocean-border rounded-xl overflow-hidden mb-16">
+          {STATS.map(({ value, label }) => (
+            <div key={label} className="bg-ocean-deep px-5 py-6 text-center">
+              <p className="text-ocean-surface font-bold text-3xl">{value}</p>
+              <p className="text-ocean-muted text-xs mt-1.5 leading-tight">{label}</p>
+            </div>
+          ))}
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
