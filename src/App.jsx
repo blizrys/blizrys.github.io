@@ -4,6 +4,7 @@ import About from './components/About'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import Photography from './components/Photography'
 import WaveDivider from './components/WaveDivider'
 
 function Footer() {
@@ -36,6 +37,8 @@ export default function App() {
         <Projects />
         <WaveDivider fromColor="#0b1929" toColor="#07111f" />
         <Contact />
+        <WaveDivider fromColor="#07111f" toColor="#0b1929" />
+        <Photography />
       </main>
       <Footer />
     </>
