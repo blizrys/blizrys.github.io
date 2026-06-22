@@ -2,6 +2,15 @@ export const NAV_LINKS = ['About', 'Experience', 'Projects', 'Contact', 'Photogr
 
 export const PROJECTS = [
   {
+    title: 'SurfMynd',
+    description:
+      'Know your wave. Log your surf sessions and discover your ideal surf window through personal telemetry analytics — where my two worlds, surfing and data science, finally meet.',
+    tags: ['react', 'data-analytics', 'next.js', 'vercel'],
+    link: 'https://surfmynd-hazel.vercel.app/',
+    year: '2025',
+    online: true,
+  },
+  {
     title: 'FurEver',
     description:
       'Foster carer community app — track your foster animal diary, earn badges, and climb the leaderboard. Built for the people giving animals their second chance.',
