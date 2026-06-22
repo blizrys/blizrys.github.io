@@ -47,9 +47,9 @@ function StatusBadge({ url }) {
   )
 }
 
-function ProjectCard({ title, description, tags, link, year, online }) {
+function ProjectCard({ title, problem, description, tags, link, year, online }) {
   return (
-    <div className="ocean-card p-6 flex flex-col gap-4 group">
+    <div className="ocean-card p-6 flex flex-col gap-5 group">
       <div className="flex items-start justify-between gap-4">
         <div>
           <span className="text-xs text-ocean-muted">{year}</span>
@@ -75,7 +75,21 @@ function ProjectCard({ title, description, tags, link, year, online }) {
         </div>
       </div>
 
-      <p className="text-ocean-muted text-sm leading-relaxed flex-1">{description}</p>
+      <div className="flex-1 space-y-4">
+        {/* The problem */}
+        {problem && (
+          <div className="border-l-2 border-ocean-coral/60 pl-3">
+            <p className="text-ocean-coral text-[11px] font-semibold uppercase tracking-widest mb-1">The problem</p>
+            <p className="text-ocean-muted text-sm leading-relaxed italic">{problem}</p>
+          </div>
+        )}
+
+        {/* The solution */}
+        <div className="border-l-2 border-ocean-surface/60 pl-3">
+          <p className="text-ocean-surface text-[11px] font-semibold uppercase tracking-widest mb-1">My solution</p>
+          <p className="text-ocean-text text-sm leading-relaxed">{description}</p>
+        </div>
+      </div>
 
       <div className="flex flex-wrap gap-2">
         {tags.map((tag) => (
@@ -94,10 +108,14 @@ export default function Projects() {
     <section id="projects" className="py-28 px-6 bg-ocean-deep">
       <div className="max-w-5xl mx-auto">
 
-        <div className="flex items-center gap-4 mb-16">
+        <div className="flex items-center gap-4 mb-4">
           <h2 className="text-white font-bold text-3xl sm:text-4xl">Projects</h2>
           <div className="section-line" />
         </div>
+
+        <p className="text-ocean-muted max-w-xl mb-16">
+          Every one of these started with a real problem worth solving — not a tutorial.
+        </p>
 
         {/* Live projects */}
         {liveProjects.length > 0 && (

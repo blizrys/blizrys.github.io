@@ -3,8 +3,10 @@ export const NAV_LINKS = ['About', 'Experience', 'Projects', 'Contact', 'Photogr
 export const PROJECTS = [
   {
     title: 'SurfMynd',
+    problem:
+      "Standard surf reports give everyone the same rating — but a beginner wants low swell and long intervals to recover between paddles, while a pro wants big, consistent sets. One score doesn't fit every level.",
     description:
-      'Know your wave. Log your surf sessions and discover your ideal surf window through personal telemetry analytics — where my two worlds, surfing and data science, finally meet.',
+      'Personal telemetry analytics that learn your level and surface the surf window that\'s actually ideal for you. Where my two worlds — surfing and data science — finally meet.',
     tags: ['react', 'data-analytics', 'next.js', 'vercel'],
     link: 'https://surfmynd-hazel.vercel.app/',
     year: '2025',
@@ -12,8 +14,10 @@ export const PROJECTS = [
   },
   {
     title: 'FurEver',
+    problem:
+      "Foster carers pour themselves into animals they'll eventually have to say goodbye to — and lose track of the precious memories along the way.",
     description:
-      'Foster carer community app — track your foster animal diary, earn badges, and climb the leaderboard. Built for the people giving animals their second chance.',
+      'A foster diary to capture every milestone, with badges and a leaderboard that build a community of carers embracing and encouraging one another.',
     tags: ['react', 'next.js', 'vercel'],
     link: 'https://furever-nine.vercel.app/',
     year: '2025',
@@ -21,8 +25,10 @@ export const PROJECTS = [
   },
   {
     title: 'MelParking',
+    problem:
+      'City planners lacked a clear, current picture of parking across the City of Melbourne to guide development decisions.',
     description:
-      "Insight platform for VicRoad's Executives — surfaces current parking situations across the City of Melbourne, identifies gaps, and recommends next steps for smarter city development.",
+      "Interactive data visualisation for VicRoad's executives — surfaces the current situation, highlights the gaps, and recommends concrete next steps.",
     tags: ['data-visualization', 'd3.js', 'firebase', 'open-data'],
     link: 'https://melparking.web.app/',
     year: '2022',
