@@ -49,7 +49,8 @@ export default function About() {
               Today I&apos;m a{' '}
               <span className="text-ocean-surface font-medium">Senior Business Analyst at DHL Supply Chain</span>{' '}
               — translating messy operational problems into clean data and system solutions.
-              Outside of work, I&apos;m in the ocean or planning the next trip.
+              Outside of work, I&apos;m in the ocean, planning the next trip, or
+              tinkering at my 3D printer — I just like making things with my hands.
             </p>
 
             <blockquote className="border-l-2 border-ocean-coral pl-4 italic text-ocean-muted text-sm">
@@ -58,7 +59,7 @@ export default function About() {
 
             {/* Personality chips */}
             <div className="flex flex-wrap gap-2 pt-2">
-              {['🏄 Surfer', '🍺 Beer enthusiast', '🏍️ Adrenaline junkie', '🤖 Robotics champion', '✈️ Traveller'].map((item) => (
+              {['🏄 Surfer', '🍺 Beer enthusiast', '🏍️ Adrenaline junkie', '🤖 Robotics champion', '🖨️ 3D printing', '✈️ Traveller'].map((item) => (
                 <span key={item} className="text-sm font-medium px-4 py-1.5 rounded-full border border-ocean-border text-ocean-muted bg-ocean-abyss">
                   {item}
                 </span>
