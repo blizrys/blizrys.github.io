@@ -54,6 +54,13 @@ export default function Hero() {
 
         {/* Tagline */}
         <p
+          className="text-ocean-muted text-sm tracking-widest uppercase mb-4 opacity-0 animate-fadeUp"
+          style={{ animationDelay: '0.45s', animationFillMode: 'forwards' }}
+        >
+          Senior Business Analyst &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp; System Engineer
+        </p>
+
+        <p
           className="text-ocean-muted text-base tracking-widest uppercase mb-10 opacity-0 animate-fadeUp"
           style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
         >
@@ -65,8 +72,11 @@ export default function Hero() {
           className="text-ocean-muted text-lg leading-relaxed max-w-2xl mx-auto mb-12 opacity-0 animate-fadeUp"
           style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}
         >
-          Building tech products end-to-end by day, chasing waves by weekend.
-          Passionate about turning complex problems into things people actually enjoy using.
+          10+ years across oil & gas, logistics and security systems — from{' '}
+          <span className="text-white font-medium">Bangkok</span> to{' '}
+          <span className="text-white font-medium">Melbourne</span>.
+          I bridge the gap between data, systems and business, and I build things
+          on the side. Chasing waves when I'm not chasing deadlines.
         </p>
 
         {/* CTAs */}

@@ -1,4 +1,4 @@
-import { SKILLS } from '../data/portfolio'
+import { SKILLS, AWARDS, LANGUAGES } from '../data/portfolio'
 
 export default function About() {
   return (
@@ -20,48 +20,89 @@ export default function About() {
             </p>
 
             <p>
-              I started coding in middle school, hooked on Robotics and an MMORPG called{' '}
-              <span className="text-ocean-foam font-medium">Ragnarok Online</span>. That itch for
-              building things never went away — I ended up working across the full stack as a{' '}
-              <span className="text-white font-medium">System Engineer</span>,{' '}
-              <span className="text-white font-medium">Data Scientist</span>, and{' '}
-              <span className="text-white font-medium">Full-Stack Developer</span>.
+              My story starts with Robotics. In 2013 I competed at{' '}
+              <span className="text-white font-medium">World RoboCup in the Netherlands</span> and{' '}
+              <span className="text-white font-medium">RoboCup Japan Open in Tokyo</span> — and
+              that curiosity for how things are built never left me.
             </p>
 
             <p>
-              Outside of work, I&apos;m in the ocean. Surfing taught me to read conditions,
-              stay patient, and commit fully when the right wave comes — and honestly,
-              that mindset shows up in how I approach engineering too.
+              I spent nearly 6 years at{' '}
+              <span className="text-white font-medium">ExxonMobil</span> in Thailand — growing from
+              customer support analyst to Scrum Master and team lead. Then I pivoted:
+              moved to Melbourne, completed a{' '}
+              <span className="text-white font-medium">Master of Data Science at Monash University</span>,
+              and built a new career across system engineering, data architecture and business analysis.
             </p>
+
+            <p>
+              Today I&apos;m a{' '}
+              <span className="text-ocean-surface font-medium">Senior Business Analyst at DHL Supply Chain</span>{' '}
+              — translating messy operational problems into clean data and system solutions.
+              Outside of work, I&apos;m in the ocean or planning the next trip.
+            </p>
+
+            <blockquote className="border-l-2 border-ocean-coral pl-4 italic text-ocean-muted text-sm">
+              "I don't dare to say I know it all — but I dare to say I know how to Google."
+            </blockquote>
 
             {/* Personality chips */}
             <div className="flex flex-wrap gap-2 pt-2">
-              {['🏄 Surfer', '🍺 Beer enthusiast', '🏍️ Adrenaline junkie', '🎮 Lifelong gamer', '🤖 Robotics nerd'].map((item) => (
-                <span
-                  key={item}
-                  className="text-sm font-medium px-4 py-1.5 rounded-full border border-ocean-border text-ocean-muted bg-ocean-abyss"
-                >
+              {['🏄 Surfer', '🍺 Beer enthusiast', '🏍️ Adrenaline junkie', '🤖 Robotics champion', '✈️ Traveller'].map((item) => (
+                <span key={item} className="text-sm font-medium px-4 py-1.5 rounded-full border border-ocean-border text-ocean-muted bg-ocean-abyss">
                   {item}
                 </span>
               ))}
             </div>
+
+            {/* Languages */}
+            <div className="pt-2">
+              <p className="text-ocean-muted text-xs font-semibold uppercase tracking-widest mb-3">Languages</p>
+              <div className="flex flex-wrap gap-3">
+                {LANGUAGES.map(({ lang, level }) => (
+                  <div key={lang} className="text-sm">
+                    <span className="text-white font-medium">{lang}</span>
+                    <span className="text-ocean-muted text-xs ml-1.5">({level})</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Skills */}
-          <div className="space-y-7">
-            <p className="text-ocean-muted text-sm font-semibold uppercase tracking-widest">Tech Stack</p>
-            {SKILLS.map(({ label, items }) => (
-              <div key={label}>
-                <p className="text-ocean-surface text-xs font-semibold tracking-widest uppercase mb-3">
-                  {label}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {items.map((item) => (
-                    <span key={item} className="ocean-tag">{item}</span>
-                  ))}
+          {/* Right column: Skills + Awards */}
+          <div className="space-y-10">
+
+            {/* Skills */}
+            <div className="space-y-6">
+              <p className="text-ocean-muted text-xs font-semibold uppercase tracking-widest">Tech Stack</p>
+              {SKILLS.map(({ label, items }) => (
+                <div key={label}>
+                  <p className="text-ocean-surface text-xs font-semibold tracking-widest uppercase mb-2.5">{label}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {items.map((item) => (
+                      <span key={item} className="ocean-tag">{item}</span>
+                    ))}
+                  </div>
                 </div>
+              ))}
+            </div>
+
+            {/* Awards */}
+            <div>
+              <p className="text-ocean-muted text-xs font-semibold uppercase tracking-widest mb-4">Honours & Awards</p>
+              <div className="space-y-3">
+                {AWARDS.map(({ title, detail }) => (
+                  <div key={title} className="flex gap-3 items-start">
+                    <span className="text-ocean-coral mt-0.5 flex-shrink-0">▹</span>
+                    <div>
+                      <p className="text-white text-sm font-medium">{title}</p>
+                      <p className="text-ocean-muted text-xs">{detail}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
           </div>
         </div>
       </div>
