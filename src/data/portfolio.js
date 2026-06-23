@@ -39,13 +39,21 @@ export const PROJECTS = [
 export const EXPERIENCE = [
   {
     company: 'DHL Supply Chain',
-    role: 'Senior Business Analyst',
-    period: 'May 2023 – Present',
-    location: 'Melbourne, VIC',
+    role: 'Technology Sector Representative',
+    period: 'Jan 2025 – Present',
     bullets: [
-      'Leading end-to-end business analysis across large-scale supply chain operations.',
-      'Translating complex operational requirements into system and data solutions.',
-      'Partnering with stakeholders across operations, IT and senior leadership to drive continuous improvement.',
+      'Applied Data Analytics representative for the Technology sector.',
+      'Lead end-to-end analysis, turning stakeholder requirements into delivered analytics and system solutions.',
+      'Partner with IT and senior leadership to drive data-led continuous improvement.',
+    ],
+  },
+  {
+    company: 'DHL Supply Chain',
+    role: 'Transport Sector Representative',
+    period: 'May 2023 – Dec 2024',
+    bullets: [
+      'Applied Data Analytics representative for the Transport sector.',
+      'Translated complex transport operations needs into reporting and data solutions.',
     ],
   },
   {
